@@ -16,7 +16,9 @@ public class Main {
         catch (UnknownHostException e){
             System.out.println("Адрес недоступен");
         }
+class portScanner {
 
+}
     }
 }
 
