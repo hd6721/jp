@@ -8,16 +8,13 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String hostadr = null;
         try {
-            System.out.print("Введите имя хоста чтобы узнать IP: ");
+            System.out.print("������� ����� ��� IP: ");
             hostadr = sc.nextLine();
             InetAddress a = InetAddress.getByName(hostadr);
-            System.out.println("IP адрес: " + a);
+            System.out.println("IP �����: " + a);
         }
         catch (UnknownHostException e){
-            System.out.println("Данный адрес недоступен или введен неправильно");
-        }
-        catch (NoSuchElementException e){
-            System.out.println("Вы не ввели адрес");
+            System.out.println("����� ����������");
         }
 
     }
