@@ -1,4 +1,5 @@
 import java.net.*;
+import java.net.Socket;
 import java.util.Scanner;
 
 public class Main {
@@ -16,9 +17,20 @@ public class Main {
         catch (UnknownHostException e){
             System.out.println("Адрес недоступен");
         }
-class portScanner {
 
-}
+        try {
+            InetAddress theAddress = InetAddress.getByName(hostadr);
+            for (int i = 1; i < 65536; i++) {
+                Socket connection = null;
+                connection = new Socket(hostadr, i);
+                System.out.println("There is a server on port " + i + " of " + hostadr);
+                if (connection != null)
+                    connection.close();
+            } // end for
+        } catch (Exception ex) {
+            System.err.println(ex);
+        }
     }
 }
+
 
