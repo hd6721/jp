@@ -1,5 +1,5 @@
 import java.net.*;
-import java.util.*;
+import java.util.Scanner;
 
 public class Main {
 
